@@ -20,6 +20,8 @@ test('login test',async()=>{
 //    const loginBtn:any = await page.waitForSelector("//span[normalize-space()='Log in']");
 //    const loginBtn = await page.locator('xpath = //span[normalize-space()="Log in"] ')
    const loginBtn = await page.locator('css = button[type="submit"]')
+   // css don't neccessrialy need to have to be css =
+   // this is also done with xpath
     await username.fill('')
     await password.fill('')
     await practiceId.fill('')
