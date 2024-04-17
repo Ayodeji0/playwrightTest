@@ -16,7 +16,10 @@ test('login test',async()=>{
    const username: Locator =  await page.locator('#Username');
    const password: Locator = await page.locator('#Password');
    const practiceId:Locator = await page.locator('#PracticeRefNumber')
-   const loginBtn:any = await page.waitForSelector("//span[normalize-space()='Log in']");
+   // DIFFERENT  WAYS TO USE LOCATORS IN PLAYWRIGHT
+//    const loginBtn:any = await page.waitForSelector("//span[normalize-space()='Log in']");
+//    const loginBtn = await page.locator('xpath = //span[normalize-space()="Log in"] ')
+   const loginBtn = await page.locator('css = button[type="submit"]')
     await username.fill('')
     await password.fill('')
     await practiceId.fill('')
